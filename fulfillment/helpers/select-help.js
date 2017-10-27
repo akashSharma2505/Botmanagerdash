@@ -8,7 +8,7 @@ module.exports = [
         var option_num = 0;
 
         var offer_option = {
-            url: 'http://localhost:3240/ghservice/',
+            url: 'http://ghbotapi.azurewebsites.net/ghservice/',
             headers: {
                 'Content-Type': 'application/json'
             },
