@@ -1,0 +1,30 @@
+{
+  "name": "ndc-bot",
+  "version": "1.0.0",
+  "description": "Microsoft Bot Framework with DialogFlow API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.heroku.com/test-app-ndc.git"
+  },
+  "author": "Devayan Sarkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://git.heroku.com/test-app-ndc/issues"
+  },
+  "homepage": "https://git.heroku.com/test-app-ndc#readme",
+  "dependencies": {
+    "api-ai-recognizer": "^1.1.1",
+    "botbuilder": "^3.10.2",
+    "botbuilder-calling": "latest",
+    "botbuilder-facebookextension": "^1.2.4",
+    "express": "^4.16.1",
+    "request": "^2.83.0",
+    "save-file": "^1.2.0",
+    "write": "^1.0.3"
+  }
+}
