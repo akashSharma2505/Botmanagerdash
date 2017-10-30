@@ -28,17 +28,17 @@ module.exports = (bot, bot_call, builder, calling) => {
             //calling.Prompt.voice("male");
             list.push(calling.Prompt.text(session, prompts.help_question));
             calling.Prompts.choice(session, new calling.PlayPromptAction(session).prompts(list), [{
-                    name: 'flight',
-                    speechVariation: ['rebook', 'can you rebook my flight', 'my flight is delayed can you book me to an earlier flight']
-                },
-                {
-                    name: 'help',
-                    speechVariation: ['help', 'help me']
-                },
-                {
-                    name: 'quit',
-                    speechVariation: ['nothing thanks', 'thank you']
-                }
+                name: 'flight',
+                speechVariation: ['rebook', 'can you rebook my flight', 'my flight is delayed can you book me to an earlier flight']
+            },
+            {
+                name: 'help',
+                speechVariation: ['help', 'help me']
+            },
+            {
+                name: 'quit',
+                speechVariation: ['nothing thanks', 'thank you']
+            }
             ]);
         },
         function (session, results) {
@@ -70,23 +70,23 @@ module.exports = (bot, bot_call, builder, calling) => {
         }
     ]);
     bot_call.dialog('/help', [
-        function (session,args) {
-            calling.Prompts.text(" Please Let me know ! which department information your want");
+        function (session, args) {
+            calling.Prompt.text(" Please Let me know ! which department information your want");
             console.log('Confirmations sent');
             var Details = session.dialogData.Details = {
-                Department:"",
-                Object:"",
-                Subject:""
-              };
+                Department: "",
+                Object: "",
+                Subject: ""
+            };
         },
-        function(session,results,args){
-session.Details.Department=results.response.entity;
-calling.Prompts.text(" Please Let me know ! what information you need regarding" + session.Details.Department);
+        function (session, results, args) {
+            session.Details.Department = results.response;
+            calling.Prompt.text(" Please Let me know ! what information you need regarding" + session.Details.Department);
         },
-        function(session,results,args){
-            session.Details.Object=results.response.entity;
+        function (session, results, args) {
+            session.Details.Object = results.response;
             require('../fulfillment/helpers/select-help')
-                    }
+        }
     ]);
     bot_call.dialog('/rebook', [
         function (session) {
