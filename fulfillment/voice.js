@@ -25,7 +25,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     bot_call.dialog('/introduction', [
         function (session, args) {
             var list = [];
-            calling.Prompt.voice("male");
+            //calling.Prompt.voice("male");
             list.push(calling.Prompt.text(session, prompts.help_question));
             calling.Prompts.choice(session, new calling.PlayPromptAction(session).prompts(list), [{
                     name: 'flight',
