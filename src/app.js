@@ -15,7 +15,7 @@ server.listen(server.get('port'), () => {
     console.log('%s listening to %s', server.name, server.get('port'));
 });
 
-const CALLBACK_URL = process.env.CALLBACK_URL || 'https://localhost:3000/api/call';
+const CALLBACK_URL = process.env.CALLBACK_URL || 'https://luisbotsas.azurewebsites.net/api/calls';
 const MICROSOFT_APP_ID = process.env.MICROSOFT_APP_ID || 'e4dcbef8-3545-4e8f-b4c8-aa2011cb671a';
 const API_AI_TOKEN = process.env.API_AI_TOKEN || 'api_ai';
 const MICROSOFT_APP_PASSWORD = process.env.MICROSOFT_APP_PASSWORD || 'avBBCTHdoztAxVU1Q7nojrS';
