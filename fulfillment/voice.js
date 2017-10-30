@@ -25,6 +25,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     bot_call.dialog('/introduction', [
         function (session, args) {
             var list = [];
+            calling.Prompt.voice("male");
             list.push(calling.Prompt.text(session, prompts.help_question));
             calling.Prompts.choice(session, new calling.PlayPromptAction(session).prompts(list), [{
                     name: 'flight',
@@ -70,7 +71,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     ]);
     bot_call.dialog('/help', [
         function (session,args) {
-            session.send(" Please Let me know ! which department information your want");
+            calling.Prompts.text(" Please Let me know ! which department information your want");
             console.log('Confirmations sent');
             var Details = session.dialogData.Details = {
                 Department:"",
@@ -80,7 +81,7 @@ module.exports = (bot, bot_call, builder, calling) => {
         },
         function(session,results,args){
 session.Details.Department=results.response.entity;
-session.send(" Please Let me know ! what information you need regarding" + session.Details.Department);
+calling.Prompts.text(" Please Let me know ! what information you need regarding" + session.Details.Department);
         },
         function(session,results,args){
             session.Details.Object=results.response.entity;
