@@ -71,7 +71,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     ]);
     bot_call.dialog('/help', [
         function (session, args) {
-            calling.Prompt.text(" Please Let me know ! which department information your want");
+            calling.Prompt.value(" Please Let me know ! which department information your want");
             console.log('help sent');
             var Details = session.dialogData.Details = {
                 Department: "",
@@ -81,7 +81,7 @@ module.exports = (bot, bot_call, builder, calling) => {
         },
         function (session, results, args) {
             session.Details.Department = results.response;
-            calling.Prompt.text(" Please Let me know ! what information you need regarding" + session.Details.Department);
+            calling.Prompt.value(" Please Let me know ! what information you need regarding" + session.Details.Department);
         },
         function (session, results, args) {
             session.Details.Object = results.response;
@@ -90,7 +90,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     ]);
     bot_call.dialog('/rebook', [
         function (session) {
-            calling.Prompt.text("This is rebook for you");
+            calling.Prompt.value("This is rebook for you");
             //session.send(prompts.rebook.confirmation);
             //calling.Prompts.confirm(session, prompts.rebook.success);
             // session.send(prompts.rebook.success);
