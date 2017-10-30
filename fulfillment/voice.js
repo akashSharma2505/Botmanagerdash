@@ -90,7 +90,7 @@ module.exports = (bot, bot_call, builder, calling) => {
     ]);
     bot_call.dialog('/rebook', [
         function (session) {
-            calling.Prompt.text("This is rebook for you);
+            calling.Prompt.text("This is rebook for you");
             //session.send(prompts.rebook.confirmation);
             //calling.Prompts.confirm(session, prompts.rebook.success);
             // session.send(prompts.rebook.success);
