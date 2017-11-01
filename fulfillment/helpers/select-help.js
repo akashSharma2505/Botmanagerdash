@@ -42,7 +42,7 @@ function create_cards(body, session_to_use) {
             .title(item.FirstName + " " + item.LastName)
             .subtitle(item.EmpId.toString())
             .images([
-                builder.CardImage.create(session_to_use, get_image_url("MEL"))
+                builder.CardImage.create(session_to_use, item.imageurl)
             ])
             .buttons([builder.CardAction.postBack(session_to_use, 'Select Crew Member ' + option, 'Select Crew Member')]);
         cards.push(card);

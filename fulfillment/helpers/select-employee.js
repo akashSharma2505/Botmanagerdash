@@ -41,7 +41,7 @@ function create_card(body, session_to_use) {
         .title(crew.FirstName + crew.LastName)
         .subtitle('JobTitle:' + crew.JobTitle)
         .images([
-            builder.CardImage.create(session_to_use, 'http://michaelsphotolab.com/yahoo_site_admin/assets/images/Air_Pilot2x2.307191941_std.JPG')
+            builder.CardImage.create(session_to_use, crew.Image)
         ])
         .buttons([
             builder.CardAction.openUrl(session_to_use, "tel:" + crew.mobile.toString(), "Click to Call")
