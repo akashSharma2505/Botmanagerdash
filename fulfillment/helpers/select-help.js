@@ -8,7 +8,7 @@ module.exports = [
         var option_num = 0;
 
         var offer_option = {
-            url: 'http://ghbotapi.azurewebsites.net/ghservice/',
+            url: 'http://ghbotapi.azurewebsites.net/crewmembers/',
             headers: {
                 'Content-Type': 'application/json'
             },

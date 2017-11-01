@@ -6,4 +6,5 @@ module.exports = (intents) => {
     intents.matches('select-option', require('../fulfillment/helpers/select-option'));
     intents.matches('select-ancillary', require('../fulfillment/helpers/select-ancillary'));
     intents.matches('GH.Help', require('../fulfillment/helpers/select-help'));
+    intents.matches('GH.Employee', require('../fulfillment/helpers/select-employee'));
 };
