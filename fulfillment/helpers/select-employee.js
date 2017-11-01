@@ -44,6 +44,6 @@ function create_card(body, session_to_use) {
             builder.CardImage.create(session_to_use, 'http://michaelsphotolab.com/yahoo_site_admin/assets/images/Air_Pilot2x2.307191941_std.JPG')
         ])
         .buttons([
-            builder.CardAction.call(session_to_use, crew.mobile.toString(),"Calling")
+            builder.CardAction.openUrl(session_to_use, "tel:" + crew.mobile.toString(), "Click to Call")
         ]);
 }
