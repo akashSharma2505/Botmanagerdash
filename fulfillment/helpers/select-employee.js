@@ -38,8 +38,8 @@ function create_card(body, session_to_use) {
     var crew = body[0];
     console.log(crew);
     return new builder.ThumbnailCard(session_to_use)
-        .title(crew.FirstName + crew.LastName)
-        .subtitle('JobTitle:' + crew.JobTitle)
+        .title(crew.FirstName + " " + crew.LastName)
+        .subtitle('Job Title: ' + crew.JobTitle)
         .images([
             builder.CardImage.create(session_to_use, crew.Image)
         ])
